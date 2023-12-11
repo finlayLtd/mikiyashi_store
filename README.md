@@ -1,35 +1,46 @@
+# flexyvue3ts
 
+This template should help get you started developing with Vue 3 in Vite.
 
-## About
+## Recommended IDE Setup
 
-- [Docker](https://www.docker.com/) as the container service
-- [MySQL](https://www.mysql.com/) 5.7 as the database
-- [Golang](https://golang.org/) 1.16.0 as the RESTFul API server
-- [Node.js](https://nodejs.org/en/) 15.11.0 as the run-time environment to run JavaScript
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
 
-## Running the app in local development
+## Type Support for `.vue` Imports in TS
 
-- build
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+
+If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+
+1. Disable the built-in TypeScript Extension
+    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
+    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
+2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+## Project Setup
 
 ```sh
-$ docker-compose build
+npm install
 ```
 
-- run app
-
-Simply run:
+### Compile and Hot-Reload for Development
 
 ```sh
-$ docker-compose run
+npm run dev
 ```
 
-By default you can access server via http://localhost:3000
+### Type-Check, Compile and Minify for Production
 
-# Contributing
+```sh
+npm run build
+```
 
-Your contributions are always welcome!
-Feel free to raise Issues, or send Pull Requests.
+### Lint with [ESLint](https://eslint.org/)
 
-# License
-
-MIT License.
+```sh
+npm run lint
+```
